@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>THe Greater Bharat</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body >
+
+	<div class="header">
+		<h1 id="heading">Learning Javascripts</h1>
+		<p>with Gonu</p>
+	</div>
+
+<!-- 	<script>
+		var num1=23;
+		var num2=32;
+		alert(num1+num2);
+	</script>
+
+
+	<script >
+		var test=" test is case sensitive";
+		var Test="test is not case sensitive";
+		alert(test);
+	</script>
+
+	<script>
+		var apple=new Object();
+		apple.name="Apple";
+		apple.age="2 days";
+		apple.type="shimla";
+
+		apple.describe=function(){
+			return this.name+" "+this.type;
+		}
+
+		console.log(apple.describe());
+
+	</script>
+-->	
+<div class="container">
+	<button onclick="this.innerHTML='you clicked'">click me</button>
+</div>
+
+<div class="container">
+	<button onclick="onClick(this)">click me</button>
+</div>
+
+<div class="container">
+	<button onclick="doClick()">click me</button>
+</div>
+<div class="container">
+	<button  onmouseover="clearDate()" onclick="showDate()">click me</button>
+</div>
+
+<div class="container">
+	<button  onmouseout="clearDate()" onmouseover="showDate()" onclick="clearDate()">click me</button>
+</div>
+
+<div class="container">
+	<button  onmouseout="clearDate()" onclick="showDate()">click me</button>
+</div>
+
+<div id="box"></div>
+
+<script >
+	function onClick(e){
+		e.innerHTML="you clicked again";
+	}
+
+</script>
+
+<script >
+	function doClick(){
+		var heading=document.getElementById("heading");
+		heading.innerHTML="you clicked";
+		var box=document.getElementById("box");
+		box.innerHTML="you clicked";
+
+	}
+
+</script>
+
+<script >
+	function showDate(){
+		var box=document.getElementById("box");
+		box.innerHTML=new Date();
+
+	}
+
+	function clearDate(){
+		var box=document.getElementById("box");
+		box.innerHTML="";
+	}
+
+</script>
+
+</body>
+</html>

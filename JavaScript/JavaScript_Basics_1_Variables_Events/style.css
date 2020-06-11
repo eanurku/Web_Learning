@@ -1,0 +1,23 @@
+body{
+
+	background-color: #fff;
+	
+
+}
+
+.header {
+	font-size: 18px;
+	background-color: #f4f4f4;
+	text-align: center;
+	border-bottom: #ccc 3px solid;
+	
+}
+
+.container{
+	text-align: center;
+	margin: 10px;
+}
+#box{
+	text-align: center;
+	margin: 10px;
+}

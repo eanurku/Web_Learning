@@ -1,0 +1,13 @@
+body{
+	background-color: black;
+	color: red;
+	/*
+	font-size: 50px;
+	font-weight: 10;
+	font-family: Arial,helventica,sans-serif;
+	*/
+	/* same as above*/
+	/*font: 10 16px Arial*/
+	line-height:4em;
+
+}

@@ -1,0 +1,217 @@
+/*{
+	margin: 0;
+	padding: 0;
+}
+*/
+/*
+body{
+	background-color: black;
+	color: red;
+	
+	font-size: 50px;
+	font-weight: 10;
+	font-family: Arial,helventica,sans-serif;
+
+	font: 10 16px Arial
+	line-height:4em;
+
+}
+*/
+
+.container{
+	margin-top: 200px;
+	width: 70%;
+}
+
+
+.box1{
+	background-color: blue;
+	color: white;
+
+	/*
+	border-top: 5px red solid;
+	border-bottom: 5px red solid;
+	border-left: 5px red solid;
+	border-right: 5px red solid;*/
+
+	/*same as above*/
+	border: 5px red solid;
+	border-width: 2px;
+	border-top-color: yellow;
+	border-bottom-style: dotted;
+
+
+	padding: 100px
+ 
+}
+
+
+.box1 h1{
+	font-family: Tahoma;
+	font-weight: : 200;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	word-spacing: 1em
+
+}
+
+.box2{
+	margin:10px ;
+	border:3px red dotted;
+	padding: 20px;
+}
+.categories{
+	margin: 10px;
+	border:4px blue dotted;
+	padding: 20px;
+
+}
+.categories h2{
+	text-align: center;
+}
+
+.categories ul{
+	padding: 0;
+	padding-left: 10px;
+	list-style:square;
+	list-style: none;
+}
+
+.categories li{
+	padding-bottom: 3px;
+	border-bottom:dotted 3px #333;
+	list-style-image: url('../images/check.png');
+}
+
+a{
+	text-decoration: none;
+	color: black
+
+}
+a:hover{
+	color: red;
+}
+a:active{
+	color: green;
+}
+a:visited{
+	color: orange;
+
+}
+
+.my-form{
+	margin: 10px;
+	padding: 20px;
+
+	
+
+}
+
+.my-form .form-group{
+	padding-bottom: 15px;
+
+}
+
+.my-form label{
+	display: block;
+
+}
+.my-form input[type="text"], .my-form textarea{
+	padding: 5px;
+	width: 100%;`
+
+}
+.button{
+	padding: 10px 15px;
+	background-color: black;
+	color: white;
+	border:4px blue dotted;
+	border:none;
+
+}
+.button:hover{
+	background-color: red;
+	color: white;
+}
+
+.block {
+	float:left;
+	width: 33.33%;
+	border: 2px red solid;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.clr{
+
+	clear: both;
+}
+#main-block{
+	margin-top: 10px;
+	float: left;
+	width: 70%;
+
+}
+
+
+#sidebar{
+	margin-top: 10px;
+	float: right;
+	width: 30%;
+	background-color: black;
+	color: white;
+	padding: 10px;
+	box-sizing: border-box;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
