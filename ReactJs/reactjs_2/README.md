@@ -5,7 +5,7 @@ npm install
 
 npm start
 
-## This project is a TodoList Application( without external Api calls)
+## This project is a TodoList Application( with external Api calls)
 addItem
 
 deleteItem
