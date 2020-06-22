@@ -1,3 +1,24 @@
+
+## Run server 
+
+npm install
+
+npm start
+
+## This project is a TodoList Application( with external Api calls)
+addItem
+
+deleteItem
+
+checkbox to mark item completed and toggle as well
+
+Header with Home|About|Services etc pages  and as constant container
+
+## ---------------------------------------------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------------------------------------
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
