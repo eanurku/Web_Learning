@@ -1,0 +1,14 @@
+<mat-checkbox 
+#checkbox
+[checked]="isChecked"
+(change)="onChange($event)"
+
+
+>
+    subscribe to newsletter
+</mat-checkbox>  
+
+
+<div *ngIf="checkbox.checked">
+  <h1>hello to checkbox</h1>
+</div>  
