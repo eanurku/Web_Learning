@@ -1,0 +1,13 @@
+.delete {
+    color:white;
+    background-color: red;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    float: right;
+    padding: 10px 11px;
+}
+
+.is-completed{
+    text-decoration: line-through;
+}
