@@ -1,0 +1,11 @@
+<div>
+   <h1>
+    {{message}}
+   </h1>
+    <app-test (childEvent)="onChildEvent($event)"></app-test>
+    
+    <h1>
+        {{message}}
+       </h1>
+    <app-test (childEvent)="message=$event"></app-test>
+</div>
