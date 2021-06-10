@@ -1,0 +1,8 @@
+<ul style="list-style: none;">
+<li *ngFor="let department of departmentList">
+  <button (click)="onSelect(department)">
+    {{department.id}} {{department.name}}
+  </button> 
+</li>
+
+</ul>

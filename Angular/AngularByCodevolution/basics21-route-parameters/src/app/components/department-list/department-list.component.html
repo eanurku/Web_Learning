@@ -1,0 +1,13 @@
+<div>
+    <ul style="list-style: none;">
+        <li  *ngFor="let department of departmentlist">
+
+            <span (click)="onSelect(department)">
+               <button> {{department.id}} {{department.name}} </button>
+            </span>
+
+      </li>
+
+    </ul>
+
+</div>
