@@ -1,0 +1,43 @@
+<!-- mat horizontal stepper without restriction on steps movement -->
+<mat-horizontal-stepper>
+    <mat-step label="Shipping"> 
+        <p>Shipping Address</p>
+    </mat-step>
+    <mat-step label="billing"> 
+       <p> Billing Address</p>
+       <button  mat-flat-button matStepperPrevious>previous</button>
+       <button  mat-flat-button matStepperNext>next</button>
+    </mat-step>
+    <mat-step label="checkout"> 
+       <p> Checkout</p>
+ 
+    </mat-step>
+</mat-horizontal-stepper>
+
+<!-- mat liner stepper ,here  next movement possible only if previous completed -->
+
+<mat-horizontal-stepper linear>
+    <mat-step label ="Shipping" completed="true">
+        <p>Shipping Details</p>
+    </mat-step>
+    <mat-step label ="Billing" completed="true" >
+        <p>Billing Details</p>
+    </mat-step>
+    <mat-step label ="Checkout" completed="false">
+        <p>Checkout Details</p>
+    </mat-step>
+</mat-horizontal-stepper>
+
+<!-- mat vertical stepper -->
+
+<mat-vertical-stepper >
+    <mat-step label ="Shipping" >
+        <p>Shipping Details</p>
+    </mat-step>
+    <mat-step label ="Billing" >
+        <p>Billing Details</p>
+    </mat-step>
+    <mat-step label ="Checkout" >
+        <p>Checkout Details</p>
+    </mat-step>
+</mat-vertical-stepper>

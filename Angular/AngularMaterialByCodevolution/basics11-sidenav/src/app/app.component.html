@@ -1,0 +1,28 @@
+<!-- <mat-toolbar class="navbar" color="primary">
+
+    <div>
+        Welcome
+    </div>
+
+    <div>
+        <span>Home</span>
+        <span>Services</span>
+        <span>About</span>
+    </div>
+  
+</mat-toolbar> -->
+
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav [(opened)]="opened" mode="side" (opened)="log('open')" (closed)="log('close')">sidenav</mat-sidenav>
+    <mat-sidenav-content>Main content
+        <button (click)="opened=!opened">
+            <mat-icon > menu</mat-icon>
+        </button>
+        <button (click)="sidenav.open()">open</button>
+        <button (click)="sidenav.close()">close</button>
+
+    </mat-sidenav-content>
+    
+</mat-sidenav-container>
+

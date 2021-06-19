@@ -1,0 +1,79 @@
+<!-- Menu -->
+<mat-menu #courseMenu1="matMenu">
+  <button mat-menu-item>Frontend</button>
+  <button mat-menu-item>backend</button>
+  <button mat-menu-item>Database</button>
+</mat-menu>
+
+  <button mat-flat-button [matMenuTriggerFor]="courseMenu1">courses1</button>
+
+
+
+
+<!-- nested menu -->
+<mat-menu #courseMenu2="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="frontEndmenu">Frontend</button>
+  <button mat-menu-item>backend</button>
+  <button mat-menu-item>Database</button>
+</mat-menu>
+
+<button mat-flat-button [matMenuTriggerFor]="courseMenu2">courses2</button>
+
+
+
+<mat-menu #frontEndmenu="matMenu">
+<button mat-menu-item>Angular</button>
+<button mat-menu-item>React</button>
+<button mat-menu-item>Vue</button>
+</mat-menu>
+
+<!-- position of menu opening -->
+<mat-menu #courseMenu3="matMenu" xPosition="after" yPosition="above" >
+  <button mat-menu-item [matMenuTriggerFor]="frontEndmenu1">Frontend</button>
+  <button mat-menu-item>backend</button>
+  <button mat-menu-item>Database</button>
+</mat-menu>
+<div>
+  <button mat-flat-button [matMenuTriggerFor]="courseMenu3" class="center" >courses3</button>
+</div>
+
+
+<mat-menu #frontEndmenu1="matMenu">
+<button mat-menu-item>Angular</button>
+<button mat-menu-item>React</button>
+<button mat-menu-item>Vue</button>
+</mat-menu>
+
+<!-- dynamic initialization of menu -->
+
+<mat-menu #lazyMenu="matMenu"  >
+<ng-template matMenuContent let-username="name" let-myhobby='hobby'>
+  <button mat-menu-item>setting</button>
+  <button mat-menu-item>my hobby is  {{myhobby}}</button>
+  <button mat-menu-item>logout {{username}}</button>
+</ng-template>
+</mat-menu>
+
+<div class="center">
+  <button mat-flat-button [matMenuTriggerData]="{name:'anurag',hobby:'soccer'}" [matMenuTriggerFor]="lazyMenu" >anurag</button>
+  <button mat-flat-button [matMenuTriggerData]="{name:'monu',hobby:'table tennis'}" [matMenuTriggerFor]="lazyMenu" >monu</button>
+</div>
+
+<!-- mat-icons within menu -->
+
+<mat-menu #appMenu1="matMenu"  >
+  <button mat-menu-item>
+         <mat-icon>voicemail</mat-icon><span>voicemail</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon> <span>redial</span>
+</button>
+<button mat-menu-item>
+<mat-icon>notifications_off</mat-icon><span>disable alerts</span>
+</button>
+</mat-menu>
+<div class="center">
+  <button mat-icon-button [matMenuTriggerFor]="appMenu1"> 
+    <mat-icon>more_vert</mat-icon>
+    </button>
+</div>
