@@ -1,0 +1,6 @@
+<h3 mat-dialog-title> session timeout</h3>
+<mat-dialog-content>Hi,{{data.name}} your session will be logged out due to inactivity</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="true">keep logged in</button>
+    <button mat-button [mat-dialog-close]="false">Logged out</button>
+</mat-dialog-actions>

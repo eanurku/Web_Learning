@@ -1,0 +1,14 @@
+<button mat-raised-button (click)="openSnackbar('item deleted')">show snackbar</button>
+
+<button mat-raised-button (click)="openSnackbar2('item deleted','Dismiss')">show snackbar</button>
+
+<button mat-raised-button (click)="openSnackbar3('item deleted','Dismiss',{duration:2000})">show snackbar</button>
+
+<br>
+<button mat-raised-button (click)="openSnackbarWithActionAndConfig('item deleted','Undo',{duration:2000})">Delete</button>
+
+<br>
+<button mat-raised-button (click)="openSnackbarWithAction('item deleted','Undo')">Delete</button>
+
+<br>
+<button mat-raised-button (click)="openCustomSnackbar()">show custom sbnackbar</button>

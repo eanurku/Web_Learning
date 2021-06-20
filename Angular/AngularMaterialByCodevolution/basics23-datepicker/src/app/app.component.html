@@ -1,0 +1,48 @@
+<!-- date picker -->
+<mat-form-field>
+  <input matInput [matDatepicker]="mydatepicker"  >
+  <mat-datepicker-toggle [for]="mydatepicker" ></mat-datepicker-toggle>
+  <mat-datepicker #mydatepicker></mat-datepicker>
+</mat-form-field>
+
+<br>
+<!-- date picker with matSuffix -->
+<mat-form-field>
+  <input matInput [matDatepicker]="mydatepicker1"  >
+  <mat-datepicker-toggle [for]="mydatepicker1" matSuffix></mat-datepicker-toggle>
+  <mat-datepicker #mydatepicker1></mat-datepicker>
+</mat-form-field>
+
+<br>
+<!-- date picker with startView-->
+<mat-form-field>
+  <input matInput [matDatepicker]="mydatepicker3" >
+  <mat-datepicker-toggle [for]="mydatepicker3" matSuffix></mat-datepicker-toggle>
+  <mat-datepicker #mydatepicker3 startView="multi-year"></mat-datepicker>
+</mat-form-field>
+<br>
+<mat-form-field>
+  <input matInput [matDatepicker]="mydatepicker4" >
+  <mat-datepicker-toggle [for]="mydatepicker4" matSuffix></mat-datepicker-toggle>
+  <mat-datepicker #mydatepicker4 startView="year"></mat-datepicker>
+</mat-form-field>
+
+<br>
+<!-- date picker with min and max restrictions-->
+<mat-form-field>
+  <input matInput [matDatepicker]="mydatepicker2" [min]="minDate" [max]="maxDate" >
+  <mat-datepicker-toggle [for]="mydatepicker2" matSuffix></mat-datepicker-toggle>
+  <mat-datepicker #mydatepicker2 ></mat-datepicker>
+</mat-form-field>
+
+<br>
+<br>
+<!-- date picker with date picker filter-->
+<mat-form-field>
+  <input matInput [matDatepicker]="mydatepicker5" [matDatepickerFilter]="datepickerFilter" >
+  <mat-datepicker-toggle [for]="mydatepicker5" matSuffix></mat-datepicker-toggle>
+  <mat-datepicker #mydatepicker5 ></mat-datepicker>
+</mat-form-field>
+
+<br>
+
