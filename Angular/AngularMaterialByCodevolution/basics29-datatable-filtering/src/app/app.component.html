@@ -1,0 +1,28 @@
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)"/>
+</mat-form-field>
+
+
+<mat-table [dataSource]="sourceData" class="mat-elevation-z8 " > 
+
+  <ng-container matColumnDef="name">
+  <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+  <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="gender">
+      <mat-header-cell *matHeaderCellDef>Gender</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.gender}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="age">
+      <mat-header-cell *matHeaderCellDef>Age</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.age}}</mat-cell>
+  </ng-container>    
+  <ng-container matColumnDef="address">
+      <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.address}}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
+  <mat-row *matRowDef="let row;columns:displayColumnsData"></mat-row>
+</mat-table>
