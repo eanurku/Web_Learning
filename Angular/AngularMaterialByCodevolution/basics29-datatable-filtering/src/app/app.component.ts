@@ -12,9 +12,9 @@ export class AppComponent {
 
   data:Employee[]=[
     {name:'monu',gender:'M',age:21,address:'morabadi'},
-    {name:'gonu',gender:'M',age:21,address:'morabadi'},
-    {name:'konu',gender:'M',age:21,address:'morabadi'},
-    {name:'tonu',gender:'M',age:21,address:'morabadi'},
+    {name:'gonu',gender:'M',age:21,address:'ranchi'},
+    {name:'konu',gender:'M',age:21,address:'patna'},
+    {name:'tonu',gender:'M',age:21,address:'patnasu'},
     {name:'nonu',gender:'M',age:21,address:'morabadi'},
     {name:'chonu',gender:'M',age:21,address:'morabadi'},
     {name:'bhonu',gender:'M',age:21,address:'morabadi'},

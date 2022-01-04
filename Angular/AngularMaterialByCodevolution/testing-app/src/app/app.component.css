@@ -1,0 +1,11 @@
+.example-expand-row{
+ height: 100px;
+}
+
+.expand-column{
+  width: 2%;
+}
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}

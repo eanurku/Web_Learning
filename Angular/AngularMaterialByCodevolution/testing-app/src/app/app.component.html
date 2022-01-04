@@ -1,0 +1,58 @@
+<mat-table [dataSource]="employeeDataSource" matSort class="mat-elevation-z8 " >
+
+
+  <ng-container matColumnDef="expandedIntern">
+    <mat-header-cell *matHeaderCellDef mat-sort-header class="expand-column"></mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button (click)="displayInterns($event)">
+        <mat-icon>{{ this.expand ?'expand_more':'expand_less'}}</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header >Name</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="gender">
+    <mat-header-cell *matHeaderCellDef mat-sort-header >Gender</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{element.gender}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="age">
+    <mat-header-cell *matHeaderCellDef mat-sort-header >Age</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{element.age}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="address">
+    <mat-header-cell *matHeaderCellDef mat-sort-header >Address</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{element.address}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="expandedInternDetail">
+    <mat-cell *matCellDef="let element" >
+      <div class="example-element-detail">
+
+        <table [hidden]="!expand" mat-table   [dataSource]="internDataSource"  multiTemplateDataRows *ngIf="internData.length !== 0">
+
+          <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef  >Name</mat-header-cell>
+            <mat-cell *matCellDef="let intern">{{intern.name}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef  >Id</mat-header-cell>
+            <mat-cell *matCellDef="let intern">{{intern.id}}</mat-cell>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="internColumns; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: internColumns;"></tr>
+        </table>
+      </div>
+    </mat-cell>
+  </ng-container>
+
+
+  <mat-header-row *matHeaderRowDef="EmployeeColumns ;sticky: true"></mat-header-row>
+  <mat-row *matRowDef="let row;columns:EmployeeColumnsData" [class.expanded]="expandedElement == row"
+           (click)="expandedElement = row">></mat-row>
+  <mat-row *matRowDef="let row;columns: ['expandedInternDetail'];when:expandMethod"  ></mat-row>
+
+</mat-table>
+<router-outlet></router-outlet>

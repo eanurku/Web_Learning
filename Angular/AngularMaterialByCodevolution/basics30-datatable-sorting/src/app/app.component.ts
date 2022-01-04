@@ -25,10 +25,11 @@ export class AppComponent implements AfterViewInit {
 sourceData=new MatTableDataSource(this.data);
 displayColumns:string[]=['name','gender','age','address'];
 displayColumnsData:string[]=['name','gender','age','address'];
+
 @ViewChild(MatSort) sort:MatSort;
 
 ngAfterViewInit(): void {
-  this.sourceData.sort=this.sort; 
+  this.sourceData.sort=this.sort;
 }
 
 }
