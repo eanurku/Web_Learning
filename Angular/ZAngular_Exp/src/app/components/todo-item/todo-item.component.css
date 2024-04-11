@@ -1,0 +1,14 @@
+.del{
+
+    color: red;
+
+}
+.todoitem{
+
+    display: inline;
+}
+
+.completed{
+    text-decoration: line-through;
+
+}

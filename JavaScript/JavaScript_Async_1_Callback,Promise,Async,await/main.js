@@ -82,41 +82,41 @@ const posts=[
 
 //Async solution by promise
 
-// function getPosts(){
+function getPosts(){
 
-// 	setTimeout(function(){
-// 		let output="";
+	setTimeout(function(){
+		let output="";
 
-// 		posts.forEach(post=>{
-// 			output+="<li>"+
-// 			post.title +
-// 			"</li>";
+		posts.forEach(post=>{
+			output+="<li>"+
+			post.title +
+			"</li>";
 
-// 		});
+		});
 
-// 		document.querySelector(".output").innerHTML=output;
-// 	},2000);
-// };
+		document.querySelector(".output").innerHTML=output;
+	},2000);
+};
 
-// function createPostMain1(post){
+function createPostMain1(post){
 
-// 	return new Promise((resolve,reject)=>{
+	return new Promise((resolve,reject)=>{
 
-// 		setTimeout(()=>{
-// 			posts.push(post);
+		setTimeout(()=>{
+			posts.push(post);
 
-// 		});
-// 		let error=false;
-// 		if(!error){
-// 			resolve();
-// 		}else{
-// 			reject("error occured");
-// 		}
+		});
+		let error=false;
+		if(!error){
+			resolve();
+		}else{
+			reject("error occured");
+		}
 
-// 	});
-// };
-// createPostMain1({title:"test title",body:"test body"})
-// .then(getPosts);
+	});
+};
+createPostMain1({title:"test title",body:"test body"})
+.then(getPosts);
 
 
 // //error in promise
@@ -227,12 +227,12 @@ const posts=[
 
 //Async/await with promise
 
-async function getUsers(){
-	const users=await fetch("https://jsonplaceholder.typicode.com/users");
+// async function getUsers(){
+// 	const users=await fetch("https://jsonplaceholder.typicode.com/users");
 
-	const data =await users.json();
+// 	const data =await users.json();
 
-	console.log(data);
-}
+// 	console.log(data);
+// }
 
-getUsers();
+// getUsers();

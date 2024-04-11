@@ -1,0 +1,13 @@
+.mylist li:first-child{
+
+    color: blue;
+
+}
+
+.mylist li:nth-child(even){
+    color: lightcoral;
+}
+
+.mylist li:last-child{
+    color: red;
+}
