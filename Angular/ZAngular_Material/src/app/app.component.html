@@ -1,8 +1,14 @@
-<h1 class="mat-typography">hello</h1>
-<p>
-  Lorem, ipsum dolor sit amet consectetur adipisicing 
-  elit. Dolorem rem sapiente tenetur error labore neque
-   libero, ipsa sit autem dolore, ut earum at repudiandae
-    reiciendis nesciunt consectetur in voluptatibus quis?
+<div>
+  <mat-button-toggle #ref>toggle</mat-button-toggle>
 
-</p>
+  {{ref.checked}}
+
+</div>
+<div>
+  <mat-button-toggle-group #ref2="matButtonToggleGroup" multiple >
+    <mat-button-toggle value="A">Angular</mat-button-toggle>
+    <mat-button-toggle value="R">React</mat-button-toggle>
+    <mat-button-toggle value="V">Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{ref2.value}}
+</div>
