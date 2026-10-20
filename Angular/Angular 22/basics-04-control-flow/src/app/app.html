@@ -1,0 +1,27 @@
+<h1>Welcome</h1>
+<button (click)="onToggle()">ToggleScreen</button>
+
+@if(toggle){
+  <h2>show green circle</h2>
+  <div class="green-circle"></div>
+}
+
+
+<select [(ngModel)]="status">
+  <option value="new">New</option>
+  <option value="shipped">Shipped</option>
+  <option value="delivered">Delivered</option>
+</select>
+
+@if(status=='new'){
+  <h2>new order</h2>
+} @else if(status=='shipped'){
+  <h2>order shipped</h2>
+}@else{
+  <h2>order delivered</h2>
+}
+
+
+@for(item of cities;track $index){
+  <h2>{{$index +1}} {{item}} </h2>
+}

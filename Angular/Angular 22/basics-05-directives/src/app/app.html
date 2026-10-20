@@ -1,0 +1,27 @@
+<div class="btn" [ngClass]="classForShow">this is show class</div>
+
+
+
+<div [class.btn-success]="true">this is show class</div>
+<div [class.btn-warning]="true">this is show class</div>
+<div [class.btn-danger]="true">this is show class</div>
+
+<button (click)="onSuccess()" >success</button>
+<button (click)="onWarning()" >warning</button>
+<button (click)="onDanger()" >danger</button>
+
+<h2>implment using ngClass</h2>
+<div  [ngClass]="showBox"></div>
+
+<button (click)="onShowCircle()" >show circle </button>
+<button (click)="onShowSquare()" >show square </button>
+
+
+<h2>implment using ngstyle</h2>
+<div [ngStyle]="styleBox"></div>
+
+
+
+
+
+
