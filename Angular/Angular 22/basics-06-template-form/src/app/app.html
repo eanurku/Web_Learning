@@ -1,0 +1,56 @@
+<h1>User Registration</h1>
+
+
+
+
+<!-- <form> #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" ngModel required>
+  <br><br>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" ngModel required email>
+  <br><br>
+  
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" ngModel required minlength="6">
+  <br><br>
+  
+  <button type="submit" [disabled]="!userForm.valid">Register</button>
+
+</form> -->
+
+
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+
+  <label for="fname">First Name </label>
+  <input type="text" name="fname" id="fname" required minlength="5" #fnameRef="ngModel" ngModel/>
+  <br>
+  @if(fnameRef.invalid && fnameRef.touched){
+    @if(fnameRef.errors?.['required']){
+    <div class="error">Firstname is required</div>
+    }
+    @else if(fnameRef.errors?.['minlength']){
+    <div class="error">Firstname should be minimum 5 characters</div>
+    }
+
+    <div>{{fnameRef.errors|json}}</div>
+  }
+
+  <label for="lname">Last Name </label>
+  <input type="text" name="lname" id="lname" ngModel/>
+  <br/>
+
+  <label for="email">Email     </label>
+  <input type="email" name="email" id="email" ngModel>
+  <br/>
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" ngModel>
+  <br/>
+
+  <input type="submit" value="Submit">
+
+
+</form>
+
